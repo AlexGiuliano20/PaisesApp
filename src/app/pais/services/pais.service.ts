@@ -11,7 +11,10 @@ export class PaisService {
   private _regionesUrl: string = 'https://restcountries.com/v2';
 
   get httpParams() {
-    return new HttpParams().set('fields', 'name,capital,cca2,flags,population');
+    return new HttpParams().set(
+      'fields',
+      'name,capital,cca2,alpha2Code,flags,population'
+    );
   }
   constructor(private _http: HttpClient) {}
 
